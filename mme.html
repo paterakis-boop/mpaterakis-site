@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="title.mme">Το γραφείο στα ΜΜΕ | Δικηγορικό γραφείο Πατεράκη, Ξάνθη</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/SourceSerif4-normal-600-greek.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/SourceSans3-normal-400-greek.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --bg:#F6F5F2;
+  --ink:#141413;
+  --mute:#5C5B56;
+  --line:rgba(20,20,19,.12);
+  --gold:#C4A35A;
+  --gold-2:#E0C57A;
+  --sans:"Source Sans 3", Arial, sans-serif;
+  --serif:"Source Serif 4", Georgia, serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:1.25rem;
+  line-height:1.4;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+:focus-visible{outline:1px solid var(--ink); outline-offset:3px}
+.wrap{max-width:1080px; margin:0 auto; padding:0 clamp(24px,5vw,56px)}
+header{position:sticky; top:0; z-index:20; background:#FFFFFF}
+header .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:96px; gap:24px; max-width:none; width:100%;
+  padding:0 clamp(24px,4vw,56px);
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; flex:none; min-width:0; max-width:280px}
+.brand .bmark{height:52px; width:auto; display:block}
+.brand .name{display:flex; flex-direction:column; gap:0; font-family:var(--sans); color:var(--ink); line-height:1.15}
+.brand .n1,.brand .n2{font-size:1.15rem; font-weight:700; letter-spacing:-.02em}
+.brand .n3{margin-top:3px; font-size:.7rem; font-weight:400; color:var(--mute)}
+nav{display:flex; align-items:center; gap:20px; justify-content:flex-end; flex:1}
+nav a{
+  text-decoration:none;
+  font-family:var(--serif);
+  font-size:.875rem;
+  font-weight:400;
+  line-height:1.3;
+  color:var(--ink);
+}
+nav a:hover{color:var(--mute)}
+nav a.on{text-decoration:underline; text-underline-offset:4px}
+nav a.btn{
+  background:#141413; color:#FAF9F5; padding:8px 14px; border-radius:8px;
+  font-family:var(--sans); font-size:1rem; font-weight:400; line-height:1.4; flex:none;
+}
+nav a.btn:hover{background:#2a2a28; color:#FAF9F5}
+
+.lang{
+  display:flex; align-items:center; gap:6px;
+  margin-left:2px;
+  font-family:var(--sans);
+  font-size:.72rem;
+  font-weight:400;
+  letter-spacing:.04em;
+  line-height:1;
+  flex:none;
+  user-select:none;
+}
+.lang button{
+  background:none; border:0; padding:0;
+  font-family:inherit; font-size:inherit;
+  font-weight:400;
+  color:var(--mute);
+  cursor:pointer;
+  line-height:1;
+}
+.lang button.on{
+  color:var(--ink);
+  font-weight:700;
+}
+.lang .sep{color:var(--mute)}
+@media (max-width:860px){
+  header .wrap{height:auto; min-height:64px; flex-wrap:wrap; gap:10px 16px; padding:12px 18px}
+  .brand{max-width:100%}
+  .brand .bmark{height:36px}
+  nav{width:100%; flex-wrap:wrap; gap:8px 12px; justify-content:flex-start}
+  nav a{font-size:.68rem}
+}
+.page{padding:72px 0 96px}
+.sec-k{
+  margin:0 0 12px;
+  font-family:var(--mono);
+  font-size:.75rem;
+  font-weight:400;
+  letter-spacing:0;
+  text-transform:uppercase;
+  color:var(--mute);
+}
+h1{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:clamp(2rem, 4vw, 3rem);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  margin:0 0 48px;
+  color:var(--ink);
+}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  cursor:pointer; list-style:none; padding:22px 0;
+  font-family:var(--sans); font-weight:600; font-size:1.25rem; line-height:1.3; color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+'; float:right; color:var(--mute); font-weight:400}
+.faq details[open] summary::after{content:'−'}
+.faq .a{padding:0 0 22px; color:var(--ink); max-width:68ch; font-size:1.125rem}
+.list{border-top:1px solid var(--line)}
+.list article{padding:28px 0; border-bottom:1px solid var(--line)}
+.list .date{
+  margin:0 0 8px;
+  font-family:var(--mono);
+  font-size:.75rem;
+  letter-spacing:0;
+  text-transform:uppercase;
+  color:var(--mute);
+}
+.list h2{
+  font-family:var(--sans);
+  font-weight:600;
+  font-size:1.25rem;
+  line-height:1.3;
+  margin:0 0 10px;
+  color:var(--ink);
+}
+.list p{margin:0; color:var(--ink); max-width:68ch; font-size:1.125rem}
+.list a.row{display:block; text-decoration:none}
+.list a.row:hover h2{text-decoration:underline; text-underline-offset:3px}
+.fine{margin:28px 0 0; color:var(--mute); font-size:.9rem; max-width:68ch; font-family:var(--sans)}
+footer{
+  padding:24px 0 40px;
+  color:var(--mute);
+  font-family:var(--sans);
+  font-size:.875rem;
+}
+footer .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+</style>
+<meta name="description" content="Το δικηγορικό γραφείο Πατεράκη στα ΜΜΕ: MEGA, ΤΑ ΝΕΑ, Παραπολιτικά, Πρώτο Θέμα, dikastiko.gr, ΕΜΠΡΟΣ Ξάνθης. Σύνδεσμοι προς τα αρχικά δημοσιεύματα.">
+<link rel="canonical" href="https://www.mpaterakis.gr/mme.html">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141413">
+<meta property="og:locale" content="el_GR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Δικηγορικό γραφείο Πατεράκη Μιχαήλ και Συνεργατών">
+<meta property="og:title" content="Το γραφείο στα ΜΜΕ | Δικηγορικό γραφείο Πατεράκη, Ξάνθη">
+<meta property="og:description" content="Το δικηγορικό γραφείο Πατεράκη στα ΜΜΕ: MEGA, ΤΑ ΝΕΑ, Παραπολιτικά, Πρώτο Θέμα, dikastiko.gr, ΕΜΠΡΟΣ Ξάνθης. Σύνδεσμοι προς τα αρχικά δημοσιεύματα.">
+<meta property="og:url" content="https://www.mpaterakis.gr/mme.html">
+<meta property="og:image" content="https://www.mpaterakis.gr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Το γραφείο στα ΜΜΕ | Δικηγορικό γραφείο Πατεράκη, Ξάνθη">
+<meta name="twitter:description" content="Το δικηγορικό γραφείο Πατεράκη στα ΜΜΕ: MEGA, ΤΑ ΝΕΑ, Παραπολιτικά, Πρώτο Θέμα, dikastiko.gr, ΕΜΠΡΟΣ Ξάνθης. Σύνδεσμοι προς τα αρχικά δημοσιεύματα.">
+<meta name="twitter:image" content="https://www.mpaterakis.gr/og-image.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Αρχική", "item": "https://www.mpaterakis.gr/"}, {"@type": "ListItem", "position": 2, "name": "ΜΜΕ", "item": "https://www.mpaterakis.gr/mme.html"}]}</script>
+<link rel="alternate" hreflang="el" href="https://www.mpaterakis.gr/mme.html">
+<link rel="alternate" hreflang="en" href="https://www.mpaterakis.gr/mme.html?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://www.mpaterakis.gr/mme.html">
+<meta property="og:locale:alternate" content="en_US">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.mpaterakis.gr/mme.html#webpage", "url": "https://www.mpaterakis.gr/mme.html", "name": "Το γραφείο στα ΜΜΕ | Δικηγορικό γραφείο Πατεράκη, Ξάνθη", "description": "Το δικηγορικό γραφείο Πατεράκη στα ΜΜΕ: MEGA, ΤΑ ΝΕΑ, Παραπολιτικά, Πρώτο Θέμα, dikastiko.gr, ΕΜΠΡΟΣ Ξάνθης. Σύνδεσμοι προς τα αρχικά δημοσιεύματα.", "inLanguage": "el", "isPartOf": {"@type": "WebSite", "@id": "https://www.mpaterakis.gr/#website", "url": "https://www.mpaterakis.gr/", "name": "Δικηγορικό γραφείο Πατεράκη Μιχαήλ και Συνεργατών", "inLanguage": ["el", "en"], "publisher": {"@id": "https://www.mpaterakis.gr/#org"}}, "about": {"@id": "https://www.mpaterakis.gr/#org"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://www.mpaterakis.gr/og-image.jpg", "width": 1200, "height": 630}}</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img class="bmark" src="logo-mark-black.png" alt="">
+      <span class="name"><span class="n1" data-i18n="brand.n1">Πατεράκης Μιχαήλ</span><span class="n2" data-i18n="brand.n2">&amp; Συνεργάτες</span><span class="n3" data-i18n="brand.n3">Δικηγορικό γραφείο</span></span>
+    </a>
+        <nav>
+      <a href="index.html#poioi" data-i18n="nav.who">Ποιοι είμαστε</a>
+      <a href="index.html#kanoume" data-i18n="nav.what">Τι κάνουμε</a>
+      <a href="index.html#epikoinonia" data-i18n="nav.contact">Επικοινωνία</a>
+      <a class="btn" href="index.html#epikoinonia" data-i18n="nav.book">Κλείστε ραντεβού</a>
+      <span class="lang" role="group" data-i18n-aria="lang.label" aria-label="Γλώσσα">
+        <button type="button" data-lang="el" class="on">EL</button>
+        <span class="sep" aria-hidden="true">|</span>
+        <button type="button" data-lang="en">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="wrap">
+    <p class="sec-k" data-i18n="mme.kicker">Το γραφείο στη δημοσιότητα</p>
+    <h1 data-i18n="mme.h1">ΜΜΕ.</h1>
+    <div class="list">
+      <article>
+        <a class="row" href="https://www.dikastiko.gr/eidhsh/xanthi-enochos-o-astynomikos-poy-paresyre-kai-egkateleipse-tin-aise-ti-dilonoyn-sto-dikastiko-gr-oi-dikigoroi-tis-oikogeneias-toy-thymatos/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.1.date">dikastiko.gr · 3 Οκτωβρίου 2025</p>
+          <h2 data-i18n="mme.1.title">Ένοχος ο αστυνομικός για τη θανάσιμη παράσυρση της Αϊσέ</h2>
+          <p data-i18n="mme.1.body">Δήλωση των συνηγόρων της οικογένειας Μιχαήλ Πατεράκη και Ιωάννη Μπάρκα μετά την καταδίκη σε 4 έτη και 10 μήνες.</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.megatv.com/2025/09/01/protodiki-apofasi-stathmos-klironomise-1-ek-eyro-se-xrei-kai-to-dikastirio-ta-diegrapse-den-eixe-kanei-apopoiisi/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.2.date">Κοινωνία Ώρα MEGA · 1 Σεπτεμβρίου 2025</p>
+          <h2 data-i18n="mme.2.title">Διαγραφή κληρονομικών χρεών 1.000.000 ευρώ</h2>
+          <p data-i18n="mme.2.body">«Εάν δεν μπορούσες να γνωρίζεις ότι είσαι κληρονόμος, δεν μπορεί να τρέξει η τετράμηνη προθεσμία αποποίησης.»</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.tanea.gr/2025/09/01/economy/protodiki-apofasi-stathmos-klironomise-1-ekat-eyro-se-xrei-kai-to-dikastirio-ta-diegrapse-den-eixe-kanei-apopoiisi/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.3.date">ΤΑ ΝΕΑ · 1 Σεπτεμβρίου 2025</p>
+          <h2 data-i18n="mme.3.title">Πρωτόδικη απόφαση-σταθμός για κληρονομικά χρέη</h2>
+          <p data-i18n="mme.3.body">Αναδημοσίευση των δηλώσεων στην «Κοινωνία Ώρα MEGA».</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.parapolitika.gr/ellada/article/1606561/protodiki-apofasi-sti-xanthi-diagrafikan-hrei-1000000-euro-pou-klironomise-politis-en-agnoia-tou-eihe-lixei-i-prothesmia-apopoiisis/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.4.date">Παραπολιτικά · Σεπτέμβριος 2025</p>
+          <h2 data-i18n="mme.4.title">Διαγράφηκαν χρέη ενός εκατομμυρίου εν αγνοία του κληρονόμου</h2>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.megatv.com/2023/12/13/ksanthi-erotimata-gia-ti-foniki-parasyrsi-19xronis-apo-astynomiko/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.5.date">MEGA · 13 Δεκεμβρίου 2023</p>
+          <h2 data-i18n="mme.5.title">Ερωτήματα για τη φονική παράσυρση 19χρονης</h2>
+          <p data-i18n="mme.5.body">«Όσα αναφέρει για τις συνθήκες διερευνώνται· προς το παρόν δεν τα αποδεχόμαστε.»</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.protothema.gr/greece/article/1445836/xanthi-dikaiosuni-gia-ton-thanato-tis-19hronis-se-trohaio-kai-timoria-tou-astunomikou-zita-i-oikogeneia-tis/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.6.date">Πρώτο Θέμα · 13 Δεκεμβρίου 2023</p>
+          <h2 data-i18n="mme.6.title">Έκκληση της οικογένειας μέσω του πληρεξουσίου δικηγόρου</h2>
+          <p data-i18n="mme.6.body">Δήλωση στο protothema.gr: να κατατεθεί κάθε πληροφορία ή υλικό κάμερας στις Αρχές.</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.super88radio.gr/michalis-paterakis-polloi-proetrepan-tin-20chroni-apo-tin-xanthi-na-kratisei-to-stoma-tis-kleisto/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.7.date">Super 88 Radio · 4 Νοεμβρίου 2022</p>
+          <h2 data-i18n="mme.7.title">«Πολλοί προέτρεπαν την 20χρονη να κρατήσει το στόμα της κλειστό»</h2>
+          <p data-i18n="mme.7.body">Συνέντευξη στον Γιάννη Κοκκαλίδη μετά την καταδίκη γιατρού σε 12 μήνες φυλάκιση.</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://www.xanthitimes.gr/2022/11/06/xanthi-12-mines-fylaki-se-giatro-prosvoli-tis/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.8.date">Xanthitimes · 6 Νοεμβρίου 2022</p>
+          <h2 data-i18n="mme.8.title">12 μήνες φυλακή σε γιατρό για προσβολή γενετήσιας αξιοπρέπειας</h2>
+          <p data-i18n="mme.8.body">Το γραφείο εκπροσώπησε την παθούσα από την καταγγελία έως το ακροατήριο.</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://empros.gr/2019/06/me-dikastiki-apofasi-allazei-o-diefthyntis-sto-mousiko-scholeio-ksanthis/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.9.date">ΕΜΠΡΟΣ · Ιούνιος 2019</p>
+          <h2 data-i18n="mme.9.title">Δικαστική απόφαση για τον διευθυντή στο Μουσικό Σχολείο Ξάνθης</h2>
+          <p data-i18n="mme.9.body">Δήλωση του δικηγόρου του εκπαιδευτικού: η απόφαση προστατεύει τον θεσμό του Μουσικού Σχολείου.</p>
+        </a>
+      </article>
+      <article>
+        <a class="row" href="https://empros.gr/2025/12/%ce%ba%ce%bb%ce%b7%cf%81%ce%bf%ce%bd%ce%bf%ce%bc%ce%b9%ce%ba%cf%8c-%ce%b4%ce%af%ce%ba%ce%b1%ce%b9%ce%bf-%ce%bc%ce%b9%ce%b1-%ce%b1%ce%bb%ce%bb%ce%b1%ce%b3%ce%ae-%cf%80%ce%bf%cf%85-%ce%b1%ce%b3%ce%b3/" target="_blank" rel="noopener">
+          <p class="date" data-i18n="mme.10.date">ΕΜΠΡΟΣ · 12 Δεκεμβρίου 2025</p>
+          <h2 data-i18n="mme.10.title">Κληρονομικό δίκαιο: μια αλλαγή που αγγίζει κάθε σπίτι</h2>
+          <p data-i18n="mme.10.body">Συνέντευξη για τις νέες ρυθμίσεις: χρέη κληρονομιάς, αποποίηση και νόμιμη μοίρα.</p>
+        </a>
+      </article>
+    </div>
+    <p class="fine" data-i18n="mme.fine">Οι σύνδεσμοι ανοίγουν το αρχικό μέσο. Η παρουσίαση είναι ενημερωτική.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="footer.firm">Δικηγορικό γραφείο Πατεράκη Μιχαήλ και Συνεργατών</span>
+    <a href="aporrito.html" data-i18n="footer.privacy">Πολιτική απορρήτου</a>
+    <span data-i18n="footer.note">© 2011–2026</span>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+</body>
+</html>

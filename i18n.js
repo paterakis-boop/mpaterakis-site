@@ -321,7 +321,7 @@
         name: "Μαρίνα Τσαγγαλίδου",
         role: "Δικηγόρος",
         lines: [
-          "Δικηγόρος, μέλος του Δικηγορικού Συλλόγου Ξάνθης από το 2017 και απόφοιτη της Νομικής Σχολής του Δημοκριτείου Πανεπιστημίου Θράκης.",
+          "Δικηγόρος, μέλος του Δικηγορικού Συλλόγου Ξάνθης από το 2019 και απόφοιτη της Νομικής Σχολής του Δημοκριτείου Πανεπιστημίου Θράκης.",
           "Κύριο αντικείμενο ενασχόλησης το Αστικό Δίκαιο (εμπράγματο, οικογενειακό, κληρονομικό).",
           "Γλώσσες: ελληνικά, αγγλικά, ισπανικά."
         ]
@@ -330,7 +330,7 @@
         name: "Marina Tsangalidou",
         role: "Lawyer",
         lines: [
-          "Lawyer, member of the Xanthi Bar Association since 2017 and graduate of the Law School of the Democritus University of Thrace.",
+          "Lawyer, member of the Xanthi Bar Association since 2019 and graduate of the Law School of the Democritus University of Thrace.",
           "Her main practice is Civil Law (property, family and succession law).",
           "Languages: Greek, English, Spanish."
         ]

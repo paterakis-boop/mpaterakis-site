@@ -365,7 +365,9 @@ h2{
   align-items:center; justify-content:center; padding:24px;
 }
 .pbox.on{display:flex}
-.pbox .card{
+.pbox .pbox-x{position:absolute;top:8px;right:12px;background:none;border:0;font:400 30px/1 var(--sans);color:var(--mute);cursor:pointer;padding:4px 10px}
+.pbox .pbox-x:hover{color:var(--ink)}
+.pbox .card{position:relative;
   background:#F6F5F2; color:var(--ink);
   width:min(640px, 100%);
   display:grid; grid-template-columns:200px 1fr; gap:28px;
@@ -892,6 +894,7 @@ h2{
 
 <div class="pbox" id="pbox" role="dialog" aria-modal="true">
   <div class="card">
+    <button type="button" class="pbox-x" id="pboxClose" data-i18n-aria="pbox.close" aria-label="Κλείσιμο">×</button>
     <img id="pboxImg" alt="">
     <div>
       <h3 id="pboxName"></h3>
@@ -1018,6 +1021,7 @@ h2{
     el.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); open(el.getAttribute('data-id')); }});
   });
   box.addEventListener('click', function(e){ if(e.target===box) close(); });
+  var xb=document.getElementById('pboxClose'); if(xb) xb.addEventListener('click', close);
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
   document.addEventListener('paterakis:lang', function(){
     if(openId && box.classList.contains('on')) open(openId);

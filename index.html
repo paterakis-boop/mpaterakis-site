@@ -857,13 +857,9 @@ h2{
       </div>
     </div>
 
-    <form class="cform" id="cform" action="https://formsubmit.co/info@mpaterakis.gr" method="POST">
+    <form class="cform" id="cform" action="https://script.google.com/macros/s/AKfycbxUMonTPaJXViAvsH3z4OxTLE3rfj15y5DyluSemGi7GIlAHyH-x-bxsfWmajO70AOx/exec" method="POST">
       <p class="ok" data-i18n="form.ok">Το μήνυμα εστάλη. Το γραφείο θα επικοινωνήσει μαζί σας.</p>
-      <input type="hidden" name="_subject" value="Μήνυμα από τον ιστότοπο">
-      <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" id="formNext" value="">
       <div class="row">
         <label><span data-i18n="form.name">Ονοματεπώνυμο</span>
           <input type="text" name="name" required autocomplete="name">
@@ -990,6 +986,7 @@ h2{
 
 
 
+<script>(function(){var f=document.getElementById("cform");if(!f)return;var btn=f.querySelector("button[type=submit]");f.addEventListener("submit",function(e){e.preventDefault();if(!f.checkValidity()){f.reportValidity();return}btn.disabled=true;var fd=new FormData(f);fetch(f.action,{method:"POST",body:fd,mode:"no-cors"}).then(function(){f.classList.add("is-sent");f.reset();btn.disabled=false;f.scrollIntoView({block:"center"})}).catch(function(){btn.disabled=false;alert((window.PATERAKIS&&window.PATERAKIS.getLang&&window.PATERAKIS.getLang()==="en")?"The message could not be sent. Please call 25410 20113.":"Το μήνυμα δεν στάλθηκε. Παρακαλούμε καλέστε 25410 20113.")})});})();</script>
 <script>(function(){var h=document.getElementById("hero"),im=h&&h.querySelector(".hero-photo img");if(!h)return;var done=false;function go(){if(done)return;done=true;h.classList.add("ready")}if(im&&im.complete&&im.naturalWidth){go()}else if(im){im.addEventListener("load",go);im.addEventListener("error",go);setTimeout(go,4000)}else{go()}})();</script>
 <script src="i18n.js?v=ft1"></script>
 
